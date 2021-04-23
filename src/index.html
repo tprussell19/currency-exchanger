@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>TITLE-HTML</title>
+  <title>Currency Exchanger</title>
 </head>
-<body>
+<body class ="container">
   <section class="main">
+    <div class="jumbotron">
+      <h1>Currency Exchanger</h1>
+    </div>
+    <form id="money-exchange">
+      <div class="form-group">
+        <label for="original-money">Please enter the amount of money you would like to have exchanged:</label>
+        <input id="original-money" type="text" class="form-control">
+        <label for="select-exchange">Please select the type of currency you would like to receive:</label>
+        <select id="select-exchange" class="form-control">
+          <option value="EUR">Euro</option>
+          <option value="CNY">Chinese Renminbi</option>
+          <option value="NGN">Nigerian Naira</option>
+          <option value="BRL">Brazilian Real</option>
+          <option value="AUD">Australian Dollar</option>
+        </select>
+        <button class="btn btn-success btn-lg" type="submit" id="get-money">Exchange Currency</button>
+      </div>
+    </form>
+    <div id="returned-money"></div>
 
   </section>
 </body>
