@@ -1,11 +1,12 @@
-import $ from 'jquery';
+import $, { error } from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeService from './js/exchange-service.js';
 
 function showMeTheMoney(response) {
-  if (response) {
+  if (response.result === "success") {
+    console.log(response.result);
     let newCurrency = $('#select-exchange').val();
     let inputAmount = parseFloat($('#input-money').val());
     $('#input-money').val("");
@@ -28,7 +29,12 @@ function showMeTheMoney(response) {
       $('#returned-money').html(`${outputAmount}`);
     }
   } else {
-    console.log('the response failed');
+    console.log(error, response["error-type"]);
+    if (response.result === "error") {
+      $('#api-error').html(`This is an error: ${response["error-type"]}`);
+    } else {
+      $('#api-error').html(`This is an error: ${response}`);
+    }
   }
 }
 
