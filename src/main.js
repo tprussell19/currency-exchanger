@@ -6,10 +6,27 @@ import ExchangeService from './js/exchange-service.js';
 
 function showMeTheMoney(response) {
   if (response) {
-    // let inputAmount = $('input-money').val();
-    // let newCurrency = $('select-exchange').val();
-    // console.log('amount: ', inputAmount, 'currency selected: ', newCurrency)
-    $('#returned-money').html(response.conversion_rates.AUD);
+    let newCurrency = $('#select-exchange').val();
+    let inputAmount = parseFloat($('#input-money').val());
+    $('#input-money').val("");
+    let outputAmount;
+    console.log(newCurrency);
+    if (newCurrency === "EUR") {
+      outputAmount = (inputAmount * response.conversion_rates.EUR).toFixed(2);
+      $('#returned-money').html(`${outputAmount}`);
+    } else if (newCurrency === "CNY") {
+      outputAmount = (inputAmount * response.conversion_rates.CNY).toFixed(2);
+      $('#returned-money').html(`${outputAmount}`);
+    } else if (newCurrency === "NGN") {
+      outputAmount = (inputAmount * response.conversion_rates.NGN).toFixed(2);
+      $('#returned-money').html(`${outputAmount}`);
+    } else if (newCurrency === "BRL") {
+      outputAmount = (inputAmount * response.conversion_rates.BRL).toFixed(2);
+      $('#returned-money').html(`${outputAmount}`);
+    } else if (newCurrency === "AUD") {
+      outputAmount = (inputAmount * response.conversion_rates.AUD).toFixed(2);
+      $('#returned-money').html(`${outputAmount}`);
+    }
   } else {
     console.log('the response failed');
   }
