@@ -32,9 +32,6 @@ _This app takes an amount of money in US Dollars and returns the value of that m
 4. Create a .env file in the top level of the project by running the command `touch .env`
 5. Store your API key in the .env file using the syntax `API_KEY=your_api_key_goes_here`. The .env file is included in the .gitignore file and as such will be excluded from any pushes to remote repositories in order to keep the API key secure.
 
-
-#### Find my website here: [Currency Exchanger](https://tprussell19.github.io/currency-exchanger) !
-
 ## Tests/Specs
 
 View test results in project directory by running `npm run test`.
