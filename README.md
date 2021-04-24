@@ -33,7 +33,7 @@ _This app takes an amount of money in US Dollars and returns the value of that m
 5. Store your API key in the .env file using the syntax `API_KEY=your_api_key_goes_here`. The .env file is included in the .gitignore file and as such will be excluded from any pushes to remote repositories in order to keep the API key secure.
 
 
-#### Find my website here: https://tprussell19.github.io/currency-exchanger !
+#### Find my website here: [Currency Exchanger](https://tprussell19.github.io/currency-exchanger) !
 
 ## Tests/Specs
 
