@@ -22,19 +22,21 @@ function showMeTheMoney(response) {
       $('#returned-money').show();
       if (newCurrency === "EUR") {
         outputAmount = (inputAmount * response.conversion_rates.EUR).toFixed(2);
-        $('#returned-money').html(`€${outputAmount}`);
+        $('#returned-money').html(`€ ${outputAmount}`);
       } else if (newCurrency === "CNY") {
         outputAmount = (inputAmount * response.conversion_rates.CNY).toFixed(2);
-        $('#returned-money').html(`¥${outputAmount}`);
+        $('#returned-money').html(`¥ ${outputAmount}`);
       } else if (newCurrency === "NGN") {
         outputAmount = (inputAmount * response.conversion_rates.NGN).toFixed(2);
-        $('#returned-money').html(`₦${outputAmount}`);
+        $('#returned-money').html(`₦ ${outputAmount}`);
       } else if (newCurrency === "BRL") {
         outputAmount = (inputAmount * response.conversion_rates.BRL).toFixed(2);
-        $('#returned-money').html(`R$${outputAmount}`);
+        $('#returned-money').html(`R$ ${outputAmount}`);
       } else if (newCurrency === "AUD") {
         outputAmount = (inputAmount * response.conversion_rates.AUD).toFixed(2);
-        $('#returned-money').html(`$${outputAmount}`);
+        $('#returned-money').html(`$ ${outputAmount}`);
+      } else {
+        $('returned-money').html('The selected currency is currently unavaliable. Please select another')
       }
     }
   } else {
