@@ -10,7 +10,6 @@ function showMeTheMoney(response) {
     let inputAmount = parseFloat($('#input-money').val());
     $('#input-money').val("");
     let outputAmount;
-    console.log(inputAmount);
     if (isNaN(inputAmount)) {
       $('#returned-money').hide();
       $('#api-error').hide();
@@ -36,7 +35,7 @@ function showMeTheMoney(response) {
         outputAmount = (inputAmount * response.conversion_rates.AUD).toFixed(2);
         $('#returned-money').html(`$ ${outputAmount}`);
       } else {
-        $('returned-money').html('The selected currency is currently unavaliable. Please select another')
+        $('returned-money').html('The selected currency is currently unavaliable. Please select another');
       }
     }
   } else {
