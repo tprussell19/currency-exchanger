@@ -23,7 +23,6 @@ _This app takes an amount of money in US Dollars and returns the value of that m
     * Run the command `npm install` to install dependencies
     * Optionally, run the commmand `npm run build` to make a bundle of the files
     * Finally, run the command `npm run start` to start a development server
-5. To run tests, navigate to `currency-exchanger/` in your terminal and run the command `npm run test`
 
 ### Creating an API Key
 1. Visit the [ExchangeRate-API](https://www.exchangerate-api.com/) site. Input your email address and click the "Get Free Key" button.
@@ -31,10 +30,6 @@ _This app takes an amount of money in US Dollars and returns the value of that m
 3. At this point, you'll be able to access a dashboard that includes your API key as well as your remaining API calls for the month.
 4. Create a .env file in the top level of the project by running the command `touch .env`
 5. Store your API key in the .env file using the syntax `API_KEY=your_api_key_goes_here`. The .env file is included in the .gitignore file and as such will be excluded from any pushes to remote repositories in order to keep the API key secure.
-
-## Tests/Specs
-
-View test results in project directory by running `npm run test`.
 
 ## Known Bugs
 
